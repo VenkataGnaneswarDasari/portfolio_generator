@@ -1,0 +1,125 @@
+* {
+    text-decoration: none;
+}
+
+input {
+    height: 30px;
+}
+
+#skillstar {
+    width: 185px;
+}
+
+#submit {
+    text-align: right;
+    align-items: right;
+    justify-content: right;
+    margin-top: 7%;
+    margin-right: 9%;
+    float: right;
+}
+
+#submit_intro {
+    text-align: right;
+    align-items: right;
+    justify-content: right;
+    margin-top: 450px;
+    margin-right: 2%;
+    float: right;
+}
+
+#skills,
+#certificates,
+#media,
+#intro {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+#skills_demo,
+#certificates_demo,
+#media_demo,
+#intro_demo {
+    box-shadow: 0 0 10px grey;
+    background-color: #BAD7E9;
+    margin: 10px;
+    padding: 5px;
+}
+
+#sidebar {
+    position: fixed;
+    padding-top: 10px;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(76, 186, 250, 0.562));
+    width: 250px;
+    box-shadow: 0 2px 5px inset grey;
+    overflow: scroll;
+    padding-bottom: 100px;
+}
+
+#sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+#sidebar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#sidebarbuttons {
+    width: 100%;
+    border-radius: 25px !important;
+    height: 45px;
+    margin-top: 10px !important;
+    font-size: larger;
+    border-radius: 10px;
+    font-size: large !important;
+    background-color: rgb(86, 162, 224) !important;
+}
+
+#content_div {
+    margin-left: 16%;
+    position: relative;
+}
+
+#div2 {
+    margin-top: auto;
+    margin-left: 8%;
+    text-align: left;
+    align-items: left;
+    justify-content: right;
+    margin-right: 10px;
+    float: left;
+}
+
+input:hover {
+    border: none;
+    box-shadow: 0 0 10px grey;
+}
+
+#yellowstar {
+    color: yellow;
+}
+
+#templates_div {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+#template {
+    background-color: aliceblue;
+    text-decoration: none;
+    box-shadow: 0 0 10px grey;
+    background-size: cover;
+    width: auto;
+    height: auto;
+    margin: 30px;
+}
