@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+        #button {
+            text-align: center;
+            border: 1px solid black;
+            background-color: rgba(0, 0, 255, 0.607);
+            padding: 2px;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+            align-items: center;
+            justify-content: center;
+            margin-left: 45%;
+            margin-bottom: 100px;
+        }
+        
+        body {
+            padding-bottom: 50px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Recursive:wght@400;500&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Recursive:wght@400;500&family=Style+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Recursive:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d1eb574a3d.js" crossorigin="anonymous"></script>
+</head>
+</head>
+
+<body>
+    <div class="main">
+        <div class="myname">
+            <h3>Portfolio</h3>
+        </div>
+        <div class="nav">
+            <input type="checkbox" id="get">
+            <div class="bar">
+                <label for="get"><i class="fa-solid fa-bars"></i></label>
+            </div>
+            <div class="navigation">
+                <ul class="list">
+                    <li><a href="#1">HOME</a></li>
+                    <li><a href="#2">SKILLS</a></li>
+                    <li><a href="#3">CERTIFICATES</a></li>
+                    <li><a href="#4">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="myintro" id="1">
+        <h2>MY INTRO</h2>
+        <div class="intro">
+            <p>I'M <span class="b">
+                    <%= name %>
+                </span>.<br><span class="b">
+                    <%= desc %>
+                </span>
+            </p>
+        </div>
+    </div>
+    <div class="myskills" id="2">
+        <h2>MY SKILLS</h2>
+        <div class="imgs">
+            <% var i=0 %>
+                <% var j=0 %>
+
+                    <% for(i=0;i<skillurl.length;i++){ %>
+                        <div class="minpic">
+                            <img src="<%= skillurl[i] %>" alt="<%= skillname[i] %>">
+                            <p id="skillname">
+                                <%= skillname[i] %>
+                            </p>
+                            <div class="stars">
+                                <% for(j=0;j<skillstar[i];j++) { %>
+                                    <i class="fa fa-star" id="yellowstar"></i>
+                                    <% } %>
+                            </div>
+                        </div>
+                        <% } %>
+
+        </div>
+    </div>
+    <div class="mycertificates" id="3">
+        <h2>MY CERTIFICATES</h2>
+        <div class="certify">
+            <% var i=0 %>
+
+                <% for(i=0;i<certiname.length;i++){ %>
+                    <div class="port">
+                        <img src="<%= platformurl[i] %>" alt="<%= certiname[i] %>">
+                        <a href="<%= certiurl[i] %>">VIEW CERTIFICATE</a>
+                    </div>
+                    <% } %>
+        </div>
+    </div>
+    <div class="contactme" id="4">
+        <h2>SOCIAL MEDIA</h2>
+        <div class="contact">
+            <% var i=0 %>
+                <% for(i=0;i<media.length;i++) { %>
+                    <div class="number">
+                        <a href="<%= profile[i] %>">
+                            <img src="<%= media[i] %>" style="width:30px;height:30px">
+                        </a>
+                    </div>
+                    <% } %>
+        </div>
+        <div class="extra">
+            <div class="add">
+                <b>
+                    <p>Contact Number:</p>
+                </b>
+                <div class="num">
+                    <p>
+                        <%= num %>
+                    </p>
+                </div>
+                <b>
+                    <p>Mail:</p>
+                </b>
+                <div class="num">
+                    <p>
+                        <%= email %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form>
+        <a href="/savedata/1" id="button">Generate link</a>
+    </form>
+</body>
+
+</html>
