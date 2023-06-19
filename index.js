@@ -225,7 +225,7 @@ app.get("/savedata/:id", function(req, res) {
         type: e
     });
     kir.save();
-    var user = "localhost:5000/portfolio/" + randomString;
+    var user = "https://portfolio-generator-i4f4.onrender.com/portfolio/" + randomString;
     var user1 = "/portfolio/" + randomString;
     res.render("view", { a: user, b: user1 });
 });
